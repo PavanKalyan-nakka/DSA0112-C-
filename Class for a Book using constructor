@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Book {
+private:
+    string title;
+    string author;
+    int year;
+
+public:
+    // Constructor
+    Book(string t, string a, int y) {
+        title = t;
+        author = a;
+        year = y;
+        cout << "Book object created!" << endl;
+    }
+
+    void display() {
+        cout << "Title: " << title << endl;
+        cout << "Author: " << author << endl;
+        cout << "Year: " << year << endl;
+    }
+
+    // Destructor
+    ~Book() {
+        cout << "Book object for \"" << title << "\" destroyed!" << endl;
+    }
+};
+
+int main() {
+    Book b1("The Alchemist", "Paulo Coelho", 1988);
+    b1.display();
+
+    return 0;
+}
