@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Car {
+private:
+    string brand;
+    string model;
+    int year;
+
+public:
+    // Constructor
+    Car(string b, string m, int y) {
+        brand = b;
+        model = m;
+        year = y;
+        cout << "Constructor called: Car object created." << endl;
+        cout << "Car Details -> Brand: " << brand << ", Model: " << model << ", Year: " << year << endl;
+    }
+
+    // Destructor
+    ~Car() {
+        cout << "Destructor called: Car object for " << brand << " " << model << " destroyed." << endl;
+    }
+};
+
+int main() {
+    cout << "Creating car object..." << endl;
+    Car car1("Toyota", "Corolla", 2023);
+
+    cout << "\nEnd of main function." << endl;
+    return 0;
+}
